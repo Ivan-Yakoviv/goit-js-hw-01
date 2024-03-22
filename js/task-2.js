@@ -40,17 +40,20 @@ console.log(getShippingMessage("Sweden", 100, 20));
 //   count += 1;
 // }
 
-function calculateTotal(number) {
-  let i=1;
-  while (i<number) {
-    count += i;
-  return count;}
-}
-console.log(calculateTotal(3));
-
-// let clientCounter = 18;
-// const maxClients = 25;
-// while (clientCounter < maxClients) {
-//   console.log(clientCounter);
-//   clientCounter += 1;
+// function calculateTotal(number) {
+//   let sum = 0;
+//   for (let i = 1; i <= number; i++) {
+//     sum += i;
+//   }
+//   return sum;
 // }
+// console.log(calculateTotal(24));
+
+
+
+let count = 2;
+
+do {
+	console.log(`Count: ${count}`);
+	count += 1;
+} while (count < 5);
