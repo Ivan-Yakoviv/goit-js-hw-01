@@ -92,10 +92,18 @@ console.log(arr.slice(-2)); // s,t (копіює з -2 до кінця)
 
 function getLastElementMeta(array) {
   const lastElementIindex = array.length-1;
-  array[array.length-2] = lastElementIindex;
+  // array[array.length-2] = lastElementIindex;
     // array.slice(length-2);
+  // return array.slice(-2);
+  if (array.length >= 2) {
+    array[array.length-2] = lastElementIindex;
     return array.slice(-2);
+  } 
+  else {array[array.length-2] = lastElementIindex;
+    return array[array.length, array[0]];
+  }
 }
 
-array = ["a", "b", "c", "d"];
+// array = ["a", "b", "c", "d"];
+array = ["d"];
 console.log(getLastElementMeta(array)); // [3,d] (копіює з -2 до кінця)
