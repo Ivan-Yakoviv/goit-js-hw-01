@@ -83,27 +83,29 @@ function findNumber(start, end, divisor) {
 }
 console.log(findNumber(3, 21, 8))
 
-let arr = ["t", "e", "s", "t"];
-arr[arr.length-1] = "q"
+// let arr = ["t", "e", "s", "t"];
+// arr[arr.length-1] = "q"
 
-console.log(arr.slice(1, 3)); // e,s (копіює з 1 до 3)
+// console.log(arr.slice(1, 3)); // e,s (копіює з 1 до 3)
 
-console.log(arr.slice(-2)); // s,t (копіює з -2 до кінця)
+// console.log(arr.slice(-2)); // s,t (копіює з -2 до кінця)
 
 function getLastElementMeta(array) {
-  const lastElementIindex = array.length-1;
+  const lastElementIndex = array.length-1;
   // array[array.length-2] = lastElementIindex;
     // array.slice(length-2);
   // return array.slice(-2);
-  if (array.length >= 2) {
-    array[array.length-2] = lastElementIindex;
-    return array.slice(-2);
-  } 
-  else {array[array.length-2] = lastElementIindex;
-    return array[array.length, array[0]];
+  // if (array.length >= 2) {
+  //   array[array.length-2] = lastElementIindex;
+  //   return array.slice(-2);
+  // } 
+  // else {array[array.length-2] = lastElementIindex;
+  const lastElement = array[lastElementIndex];
+  array = [lastElementIndex, lastElement];
+  return array;
   }
-}
 
-// array = ["a", "b", "c", "d"];
-array = ["d"];
+
+array = ["a"];
+// array = ["d", "c"];
 console.log(getLastElementMeta(array)); // [3,d] (копіює з -2 до кінця)
